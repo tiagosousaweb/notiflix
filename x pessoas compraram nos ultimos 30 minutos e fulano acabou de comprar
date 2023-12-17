@@ -9,13 +9,13 @@
         var i = 0, qtd = nome.length;
         setInterval(function doThis() {
             if (i == 11) return; // somente 11 eventos serão disparados
-            if (i == 1  i == 8  i == 10) {
+            if (i == 1 || i == 8 ||  i == 10) {
                 toastr.info((qtd + (i * 3)) + ' pessoas compraram nos ultimos 30min.', {
                     timeOut: 5000,
                     positionClass: "toast-bottom-right",
                 });
             }
-            toastr.success(nome[i++] + ' acabou de garantir ' + (i + 1) + ' potes.', {
+            toastr.success(nome[i++] + ' acabou de comprar!', {
                 timeOut: 5000,
                 positionClass: "toast-bottom-right",
             })
