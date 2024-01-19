@@ -1,0 +1,19 @@
+<div id="contador"><p><b id="numero">689</b> assistindo agora...</p></div>
+
+
+<script>let crescente=!0;function alterarVisualizadores(){let numero=document.getElementById("numero");let visualizadores=parseInt(numero.textContent,10);if(crescente){visualizadores+=7}else{visualizadores-=6}
+numero.textContent=visualizadores;if(visualizadores>=724){crescente=!1}else if(visualizadores<=495){crescente=!0}}
+setInterval(alterarVisualizadores,3700)</script>
+
+<style>
+    #contador{
+        color: red;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contador p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
