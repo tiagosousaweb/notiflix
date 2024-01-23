@@ -1,7 +1,6 @@
 # Dividir WhatsApp para vários atendentes:
 
 ```
-
 <script>
     function getWhatsAppNumber() {
         var mensagemWhats = 'Eu quero testar!';
