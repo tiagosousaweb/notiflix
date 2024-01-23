@@ -1,0 +1,9 @@
+# Script redirecionar depois de determinado tempo
+
+```
+<script>
+    setTimeout(function() {
+    window.location.href = "URL_AQUI";
+}, 2000);
+</script>
+```

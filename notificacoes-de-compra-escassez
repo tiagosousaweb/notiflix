@@ -1,0 +1,34 @@
+# Notificações de Compra (Gatilho da Escassez):
+
+![Notificações de Compra](https://raw.githubusercontent.com/tiagosousaweb/scripts-uteis/main/images/img1.png)
+
+```
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<script>
+    $(document).ready(function onDocumentReady() {
+        var URL_FINAL = '#';
+        var nome = ['Luciana Oliveira', 'Marcia Araújo', 'Carolina Dias', 'Martha', 'Aline Campos', 'Luciane R Freire', 'Simone Z', 'Laura Campos', 'Carla Dias', 'Mariana Ruas', 'Jessica Ribeiro', 'Karol Lia'];
+        nome.sort(() => Math.random() - 0.5);
+        var i = 0, qtd = nome.length;
+        setInterval(function doThis() {
+            if (i == 11) return; // somente 11 eventos serão disparados
+            if (i == 1 || i == 8 || i == 10) {
+                toastr.info('<a href="' + URL_FINAL + '">Clique e Reserve sua vaga também!</a> ' + (qtd + (i * 3)) + ' novas alunas compraram nos últimos 30min.', {
+                    timeOut: 5000,
+                    positionClass: "toast-bottom-right",
+                });
+            }
+            toastr.success('<a href="' + URL_FINAL + '">Clique e Reserve sua vaga também!</a> ' + nome[i++] + ' acabou de reservar a vaga dela.', {
+                timeOut: 5000,
+                positionClass: "toast-bottom-right",
+            })
+        }, 10 * 1000);   // a cada 10 segundos
+    });
+</script>
+```
+
+Se desejar, altere os nomes.
+
+Altere # para sua url em var URL_FINAL = '#';
